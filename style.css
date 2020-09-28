@@ -1,0 +1,141 @@
+@font-face {
+  src: url("terminal-grotesque.ttf");
+  font-family: terminal;
+}
+
+@font-face {
+  src: url("texgyreheros-regular.otf");
+  font-family: texgyreheros;
+}
+
+@keyframes rotation {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(359deg);
+  }
+}
+
+.tabSpace {
+  padding-left: 64px;
+}
+
+.navBarPosition {
+  position: fixed;
+  width: 100%;
+  height: 10px;
+  top: 0px;
+}
+
+.navBarStructure {
+  width: 90%;
+  max-width: 1000px;
+
+}
+
+#nameText {
+  float: left;
+  padding: 2px;
+  border: 1px solid white;
+  border-radius: 100px;
+  font-family: texgyreheros;
+}
+
+.menuButtonStructure {
+  float: right;
+}
+
+#menuButtonText {
+  padding: 2px;
+  padding-left: 8px;
+  padding-right: 8px;
+  border: 1px solid black;
+  border-radius: 100px;
+  font-family: texgyreheros;
+}
+
+.pageTextStructure {
+  position: static;
+  width: 90%;
+  height: 100px;
+  max-width: 1000px;
+
+}
+
+.pageMainText {
+  font-size: 90px;
+  font-family: terminal;
+  line-height: 85px;
+}
+
+.pageMainTextLink {
+  font-size: 90px;
+  font-family: terminal;
+  line-height: 90px;
+  color: blue;
+  text-decoration: underline;
+}
+
+.pageMainTextLink:hover {
+  color: #00ffff;
+}
+
+.pageBodyText {
+  font-family: texgyreheros;
+  font-size: 32px;
+  text-align: left;
+  line-height: 36px;
+  max-width: 800px;
+  text-align: justify;
+  padding-bottom: 100px;
+}
+
+.startButtonStructure {
+  position: fixed;
+  right: 10%;
+  top: 28%;
+  animation: rotation 20s infinite linear;
+}
+
+.startButtonText {
+  padding-top: 5px;
+  padding-bottom: 5px;
+  padding: 32px;
+  font-family: terminal;
+  font-size: 40px;
+  color: black;
+  border: 2px solid black;
+  border-radius: 200px / 200px;
+  background-color: white;
+}
+
+.startButtonText:hover {
+  color: white;
+  background-color: blue;
+
+}
+
+#mydiv {
+  position: absolute;
+  z-index: 9;
+  background-color: yellow;
+  border: 1px solid black;
+  text-align: left;
+  cursor: move;
+
+}
+
+#mydivheader {
+  padding: 10px;
+  cursor: move;
+  z-index: 10;
+  color: black;
+  font-family: texgyreheros;
+  font-size: 20px;
+}
+
+.myDivText {
+  font-family: texgyreheros;
+  padding: 10px;
+}

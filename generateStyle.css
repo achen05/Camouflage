@@ -1,0 +1,125 @@
+@font-face {
+  src: url("terminal-grotesque.ttf");
+  font-family: terminal;
+}
+
+@font-face {
+  src: url("texgyreheros-regular.otf");
+  font-family: texgyreheros;
+}
+
+@keyframes rotation {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(359deg);
+  }
+}
+
+
+.tabSpace {
+  padding-left: 64px;
+}
+
+.navBarPosition {
+  position: fixed;
+  width: 100%;
+  height: 10px;
+  top: 0px;
+}
+
+.navBarStructure {
+  width: 90%;
+  max-width: 1000px;
+
+}
+
+#nameText {
+  float: left;
+  padding: 2px;
+  border: 1px solid white;
+  border-radius: 100px;
+  font-family: texgyreheros;
+}
+
+.menuButtonStructure {
+  float: right;
+}
+
+#menuButtonText {
+  padding: 2px;
+  padding-left: 8px;
+  padding-right: 8px;
+  border: 1px solid black;
+  border-radius: 100px;
+  font-family: texgyreheros;
+}
+
+.pageTextStructure {
+  position: static;
+  width: 90%;
+  height: 100px;
+  max-width: 1000px;
+  padding-top: 8px;
+
+}
+
+.pageMainText {
+  font-size: 90px;
+  font-family: terminal;
+  top: 0;
+}
+
+.pageMainTextLink {
+  font-size: 90px;
+  font-family: terminal;
+  line-height: 90px;
+  color: blue;
+  text-decoration: underline;
+}
+
+.pageMainTextLink:hover {
+  color: #00ffff;
+}
+
+.pageBodyText {
+  font-family: texgyreheros;
+  font-size: 20px;
+  text-align: left;
+  line-height: 24px;
+  width: 90%;
+  max-width: 500px;
+  text-align: justify;
+}
+
+.startButtonStructure {
+  position: fixed;
+  right: 10%;
+  top: 28%;
+  animation: rotation 20s infinite linear;
+}
+
+.startButtonText {
+  padding-top: 5px;
+  padding-bottom: 5px;
+  padding: 32px;
+  font-family: terminal;
+  font-size: 40px;
+  color: black;
+  border: 2px solid black;
+  border-radius: 200px / 200px;
+  background-color: white;
+}
+
+.startButtonText:hover {
+  color: white;
+  background-color: blue;
+
+}
+
+.generateStructure {
+  width: 100%;
+  background-color: black;
+
+}
