@@ -67,6 +67,7 @@
   font-size: 90px;
   font-family: terminal;
   line-height: 85px;
+  letter-spacing: -1px;
 }
 
 .pageMainTextLink {
@@ -89,6 +90,7 @@
   max-width: 800px;
   text-align: justify;
   padding-bottom: 100px;
+  letter-spacing: -1px;
 }
 
 .startButtonStructure {
@@ -108,6 +110,7 @@
   border: 2px solid black;
   border-radius: 200px / 200px;
   background-color: white;
+  letter-spacing: 2px;
 }
 
 .startButtonText:hover {
@@ -138,4 +141,85 @@
 .myDivText {
   font-family: texgyreheros;
   padding: 10px;
+}
+.galleryImageContainer {
+  position: absolute;
+  width: 50vw;
+  max-width: 300px;
+  background-color: white;
+  border: 1px solid black;
+  cursor: move;
+}
+
+#galleryImageContainerAlyssa {
+  z-index: 10;
+  left: 20%;
+  top: 30%;
+}
+
+#galleryImageContainerChanel {
+  z-index: 9;
+  left: 70%;
+  top: 25%;
+}
+
+#galleryImageContainerDani {
+  z-index: 6;
+  left: 60%;
+  top: 30%;
+}
+
+#galleryImageContainerGill {
+  left: 10%;
+  top: 45%;
+}
+
+#galleryImageContainerKate {
+  z-index: 8;
+  left: 75%;
+  top: 45%;
+}
+
+#galleryImageContainerKatie {
+  left: 25%;
+  top: 35%;
+}
+
+#galleryImageContainerKristie {
+  left: 5%;
+  top: 25%;
+}
+
+#galleryImageContainerKylie {
+  left: 45%;
+  top: 45%;
+}
+
+#galleryImageContainerMegan {
+  left: 55%;
+  top: 35%;
+}
+
+.galleryImage {
+  width: 50vw;
+  height: 50vw;
+  max-width: 300px;
+  max-height: 300px;
+  object-fit: cover;
+}
+
+.galleryImageName {
+  font-family: texgyreheros;
+  float: left;
+  padding-left: 20px;
+}
+
+#alyssaImage {
+  transform: rotate(90deg)
+}
+
+.galleryImageCity {
+  font-family: texgyreheros;
+  float: right;
+  padding-right: 20px;
 }

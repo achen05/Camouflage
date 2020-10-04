@@ -9,9 +9,111 @@
     <center>
 
       <div class="pageTextStructure">
-        <p class="pageMainText">Gallery coming soon<br>
+        <p class="pageMainText">Gallery<br>
          </p>
       </div>
+      <div id="galleryImageContainerAlyssa" class="galleryImageContainer">
+        <img src="https://raw.githubusercontent.com/achen05/Camouflage/master/Alyssa%20Belmont.JPG" class="galleryImage" id="alyssaImage">
+        <p class="galleryImageName">Alyssa</p>
+        <p class="galleryImageCity">Belmont, CA</p>
+      </div>
+
+      <div id="galleryImageContainerChanel" class="galleryImageContainer">
+        <img src="https://raw.githubusercontent.com/achen05/Camouflage/master/Chanel%20Berkeley.jpeg" class="galleryImage">
+        <p class="galleryImageName">Chanel</p>
+        <p class="galleryImageCity">Berkeley, CA</p>
+      </div>
+
+      <div id="galleryImageContainerDani" class="galleryImageContainer">
+        <img src="https://raw.githubusercontent.com/achen05/Camouflage/master/Dani%20Davis.jpeg" class="galleryImage">
+        <p class="galleryImageName">Dani</p>
+        <p class="galleryImageCity">Davis, CA</p>
+      </div>
+
+      <div id="galleryImageContainerGill" class="galleryImageContainer">
+        <img src="https://raw.githubusercontent.com/achen05/Camouflage/master/Gill%20Davis.PNG" class="galleryImage">
+        <p class="galleryImageName">Gill</p>
+        <p class="galleryImageCity">Davis, CA</p>
+      </div>
+
+      <div id="galleryImageContainerKate" class="galleryImageContainer">
+        <img src="https://raw.githubusercontent.com/achen05/Camouflage/master/Kate%20Centerville%2C%20MA.jpeg" class="galleryImage">
+        <p class="galleryImageName">Kate</p>
+        <p class="galleryImageCity">Centerville, MA</p>
+      </div>
+
+      <div id="galleryImageContainerKatie" class="galleryImageContainer">
+        <img src="https://raw.githubusercontent.com/achen05/Camouflage/master/Katie%20Davis.jpeg" class="galleryImage">
+        <p class="galleryImageName">Katie</p>
+        <p class="galleryImageCity">Davis, CA</p>
+      </div>
+
+      <div id="galleryImageContainerKristie" class="galleryImageContainer">
+        <img src="https://raw.githubusercontent.com/achen05/Camouflage/master/Kristie%20Millbrae.PNG" class="galleryImage">
+        <p class="galleryImageName">Kristie</p>
+        <p class="galleryImageCity">Millbrae, CA</p>
+      </div>
+
+      <div id="galleryImageContainerKylie" class="galleryImageContainer">
+        <img src="https://raw.githubusercontent.com/achen05/Camouflage/master/Kylie%20Belmont.png" class="galleryImage">
+        <p class="galleryImageName">Kylie</p>
+        <p class="galleryImageCity">Belmont, CA</p>
+      </div>
+
+      <div id="galleryImageContainerMegan" class="galleryImageContainer">
+        <img src="https://raw.githubusercontent.com/achen05/Camouflage/master/Megan%20Redwood%20City%20.jpeg" class="galleryImage">
+        <p class="galleryImageName">Megan</p>
+        <p class="galleryImageCity">Redwood City, CA</p>
+      </div>
+
+
+
       </center>
+      <script>
+      dragElement(document.getElementById("galleryImageContainerAlyssa"));
+      dragElement(document.getElementById("galleryImageContainerChanel"));
+      dragElement(document.getElementById("galleryImageContainerDani"));
+      dragElement(document.getElementById("galleryImageContainerGill"));
+      dragElement(document.getElementById("galleryImageContainerKate"));
+      dragElement(document.getElementById("galleryImageContainerKatie"));
+      dragElement(document.getElementById("galleryImageContainerKristie"));
+      dragElement(document.getElementById("galleryImageContainerKylie"));
+      dragElement(document.getElementById("galleryImageContainerMegan"));
+
+function dragElement(elmnt) {
+  var pos1 = 0, pos2 = 0, pos3 = 0, pos4 = 0;
+    elmnt.onmousedown = dragMouseDown;
+
+  function dragMouseDown(e) {
+    e = e || window.event;
+    e.preventDefault();
+    // get the mouse cursor position at startup:
+    pos3 = e.clientX;
+    pos4 = e.clientY;
+    document.onmouseup = closeDragElement;
+    // call a function whenever the cursor moves:
+    document.onmousemove = elementDrag;
+  }
+
+  function elementDrag(e) {
+    e = e || window.event;
+    e.preventDefault();
+    // calculate the new cursor position:
+    pos1 = pos3 - e.clientX;
+    pos2 = pos4 - e.clientY;
+    pos3 = e.clientX;
+    pos4 = e.clientY;
+    // set the element's new position:
+    elmnt.style.top = (elmnt.offsetTop - pos2) + "px";
+    elmnt.style.left = (elmnt.offsetLeft - pos1) + "px";
+  }
+
+  function closeDragElement() {
+    // stop moving when mouse button is released:
+    document.onmouseup = null;
+    document.onmousemove = null;
+  }
+}
+      </script>
   </body>
 </html>
