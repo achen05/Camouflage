@@ -22,7 +22,7 @@ function setup() {
   inputButton = createFileInput(handleFile);
   inputButton.elt.style.border = '1px solid black';
   inputButton.center('horizontal');
-  inputButton.position(c.position(), 800);
+  inputButton.position(c.position(), 650);
 }
 
 function draw() {
