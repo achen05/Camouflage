@@ -8,23 +8,63 @@
   <script src="p5.js"></script>
   <script src="p5.min.js"></script>
   <script src="sketch.js"></script>
-  </head>
+</head>
   <body>
     <center>
-      <p class="pageMainText">Generate</p>
-      <p class="pageBodyText">Instructions</p>
-      <p class="pageBodyText">
-        Click 'Choose File' and select an image file from your device.
-        Try to use an image of something that is meaningful to you.</p>
-      <p class="pageBodyText">
-        A new image will be generated from the image you chose. If no new image is generated, please refresh the page and try again. This is a known bug.
-        You will be prompted to download this new image.</p>
-        <p class="pageBodyText">
-        You now have a new image which only you can see.
-        Only you know what this image contains.
-        Enjoy!
-      </p>
+      <div id="backButtonContainer">
+        <p id="menuContainerHeader">LINKS</p>
+        <a  class="menuLink" href="home.html">Go Back</a>
+      </div>
+      <div class="mainTextStructure">
+        <p class="mainText1">Ge</p>
+        <p class="mainText2">ner</p>
+        <p class="mainText1">at</p>
+        <p class="mainText2">e</p>
+      </div>
+      <p class="pageBodyText">Instructions<br>
+Click 'Choose File' and select an image file from your device. Try to use an image of something that is meaningful to you. <br>
+A new image will be generated from the image you chose.<br> <b>***If no new image is generated, please refresh the page and try again. This is a known bug.***</b></br>
+You will be prompted to download this new image. <br>
+You now have a new image which only you can see. Only you know what this image contains. Enjoy!
+</p>
 
-    </center>
+</center>
+    <script type="text/javascript">
+    dragElement(document.getElementById("backButtonContainer"));
+    function dragElement(elmnt) {
+      var pos1 = 0, pos2 = 0, pos3 = 0, pos4 = 0;
+        elmnt.onmousedown = dragMouseDown;
+
+      function dragMouseDown(e) {
+        e = e || window.event;
+        e.preventDefault();
+        // get the mouse cursor position at startup:
+        pos3 = e.clientX;
+        pos4 = e.clientY;
+        document.onmouseup = closeDragElement;
+        // call a function whenever the cursor moves:
+        document.onmousemove = elementDrag;
+      }
+
+      function elementDrag(e) {
+        e = e || window.event;
+        e.preventDefault();
+        // calculate the new cursor position:
+        pos1 = pos3 - e.clientX;
+        pos2 = pos4 - e.clientY;
+        pos3 = e.clientX;
+        pos4 = e.clientY;
+        // set the element's new position:
+        elmnt.style.top = (elmnt.offsetTop - pos2) + "px";
+        elmnt.style.left = (elmnt.offsetLeft - pos1) + "px";
+      }
+
+      function closeDragElement() {
+        // stop moving when mouse button is released:
+        document.onmouseup = null;
+        document.onmousemove = null;
+      }
+    }
+    </script>
   </body>
 </html>

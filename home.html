@@ -4,27 +4,116 @@
     <meta charset="utf-8">
     <link rel="stylesheet" href="style.css">
     <title></title>
-    <script>
-      if( /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent) ) {
-        alert("It seems that you are on a mobile device. This website is not designed for mobile devices and some features may be broken. For the full experience, please use a computer.");
-}
-    </script>
+    <script src="CircleType-master/dist/circletype.min.js"></script>
   </head>
   <body>
     <center>
-
+      <div id="menuContainer">
+        <p id="menuContainerHeader">LINKS</p>
+        <a  class="menuLink" href="generate.html">Generate</a>
+        <a  class="menuLink" href="gallery.html">Gallery</a>
+        <a  class="menuLink" href="about.html">About</a>
+      </div>
       <div class="pageTextStructure">
-        <p class="pageMainText">You can't see the artwork on this website.<br>
-           It's not for you. <br>
+        <p class="mainText1">Yo</p>
+        <p class="mainText2">u </p>
+        <p class="mainText4"><b>Ca</b></p>
+        <p class="mainText3">n't </p>
+        <p class="mainText1">Se</p>
+        <p class="mainText2">e </p><br>
+        <p class="mainText2"> Th</p>
+        <p class="mainText1">e </p>
+        <p class="mainText1"> Art</p>
+        <p class="mainText4"><b>wo</b></p>
+        <p class="mainText1">rk </p><br>
+        <p class="mainText4"><b>On</b> </p>
+        <p class="mainText2"> Th</p>
+        <p class="mainText1">i</p>
+        <p class="mainText1">s </p>
+        <p class="mainText1">We</p>
+        <p class="mainText2">b</p>
+        <p class="mainText3">si</p>
+        <p class="mainText4"><b>te.</b><br>
+        <p class="mainText1">It's </p>
+        <p class="mainText3">No</p>
+        <p class="mainText4"><b>t </b> </p>
+        <p class="mainText2">F</p>
+        <p class="mainText1">or </p>
+        <p class="mainText4"> <b>Yo</b></p>
+        <p class="mainText3">u.</p> <br>
+<!---         <br>
+          <br>
            <a  href="generate.html"class="pageMainTextLink">But it can be.</a>
            Or would you rather <a href="gallery.html" class="pageMainTextLink"> see the gallery?</a>
-           Maybe you'd like <a href="about.html" class="pageMainTextLink">more info?</a>
-         </p>
-      </div>
-      <div class="startButtonStructure" onclick="location.href = 'generate.html'">
-        <p class="startButtonText">START</p>
+         Maybe you'd like <a href="about.html" class="pageMainTextLink">more info?</a>
+       </p> *//
+     </div> -->
+        <p id="startText" onclick="location.href = 'generate.html'">START HERE</p>
+        <script type="text/javascript">
+        new CircleType(document.getElementById('startText'))
+        .radius(100);
+
+
+        </script>
+
+
 
       </div>
     </center>
+    <script type="text/javascript">
+    dragElement(document.getElementById("menuContainer"));
+    function dragElement(elmnt) {
+      var pos1 = 0, pos2 = 0, pos3 = 0, pos4 = 0;
+        elmnt.onmousedown = dragMouseDown;
+
+      function dragMouseDown(e) {
+        e = e || window.event;
+        e.preventDefault();
+        // get the mouse cursor position at startup:
+        pos3 = e.clientX;
+        pos4 = e.clientY;
+        document.onmouseup = closeDragElement;
+        // call a function whenever the cursor moves:
+        document.onmousemove = elementDrag;
+      }
+
+      function elementDrag(e) {
+        e = e || window.event;
+        e.preventDefault();
+        // calculate the new cursor position:
+        pos1 = pos3 - e.clientX;
+        pos2 = pos4 - e.clientY;
+        pos3 = e.clientX;
+        pos4 = e.clientY;
+        // set the element's new position:
+        elmnt.style.top = (elmnt.offsetTop - pos2) + "px";
+        elmnt.style.left = (elmnt.offsetLeft - pos1) + "px";
+      }
+
+      function closeDragElement() {
+        // stop moving when mouse button is released:
+        document.onmouseup = null;
+        document.onmousemove = null;
+      }
+    }
+
+    var example = ['?', '!', '.', '*'];
+
+        textSequence(0);
+        function textSequence(i) {
+
+            if (example.length > i) {
+                setTimeout(function() {
+                    document.getElementById("sequence1").innerHTML = example[i];
+                    document.getElementById("sequence2").innerHTML = example[i];
+                    textSequence(++i);
+                }, 300); // 1 second (in milliseconds)
+
+            } else if (example.length == i) { // Loop
+                textSequence(0);
+            }
+
+        }
+    </script>
   </body>
 </html>

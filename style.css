@@ -8,6 +8,31 @@
   font-family: texgyreheros;
 }
 
+@font-face {
+  src: url("texgyreheros-bold.otf");
+  font-family: texgyreherosbold;
+}
+
+@font-face {
+  src: url("Mondwest-Regular.otf");
+  font-family: Mondwest;
+}
+
+@font-face {
+  src: url("EditorialNew-Light.otf");
+  font-family: EditorialNew;
+}
+
+@font-face {
+  src: url("NeueBit-Bold.otf");
+  font-family: NeueBit;
+}
+
+@font-face {
+  src: url("NeueMontreal-Regular.otf");
+  font-family: NeueMontreal;
+}
+
 @keyframes rotation {
   from {
     transform: rotate(0deg);
@@ -17,107 +42,211 @@
   }
 }
 
+body {
+  background-color: white;
+}
+
 .tabSpace {
   padding-left: 64px;
 }
 
-.navBarPosition {
-  position: fixed;
-  width: 100%;
-  height: 10px;
-  top: 0px;
-}
 
-.navBarStructure {
-  width: 90%;
-  max-width: 1000px;
-
-}
-
-#nameText {
-  float: left;
-  padding: 2px;
-  border: 1px solid white;
-  border-radius: 100px;
-  font-family: texgyreheros;
-}
-
-.menuButtonStructure {
-  float: right;
-}
-
-#menuButtonText {
-  padding: 2px;
-  padding-left: 8px;
-  padding-right: 8px;
-  border: 1px solid black;
-  border-radius: 100px;
-  font-family: texgyreheros;
-}
 
 .pageTextStructure {
   position: static;
-  width: 90%;
+  width: 100%;
   height: 100px;
-  max-width: 1000px;
+  max-width: 1200px;
+  padding-top: 100px;
+  text-align: center;
 
 }
 
-.pageMainText {
-  font-size: 90px;
-  font-family: terminal;
-  line-height: 85px;
-  letter-spacing: -1px;
+.mainText1, .mainText2, .mainText3, .mainText4 {
+  display: inline;
+  line-height: 125px;
+  color: black;
+  letter-spacing: -3px;
+  transition: font-size .2s;
+}
+
+.mainText1:hover {
+  font-size: 130px;
+}
+
+.mainText2:hover {
+  font-size: 140px;
+}
+
+.mainText3:hover {
+  font-size: 140px;
+}
+
+.mainText4:hover {
+  font-size: 130px;
+}
+
+.mainText1 {
+  font-family: Mondwest;
+  font-size: 150px;
+}
+
+.mainText2 {
+  font-family: EditorialNew;
+  font-size: 120px;
+}
+
+.mainText3 {
+  font-family: NeueBit;
+  font-size: 170px;
+}
+
+.mainText4 {
+  font-family: NeueMontreal;
+  font-size: 110px;
 }
 
 .pageMainTextLink {
-  font-size: 90px;
-  font-family: terminal;
+  font-size: 80px;
+  font-family: Mondwest;
   line-height: 90px;
   color: blue;
   text-decoration: underline;
+
 }
 
 .pageMainTextLink:hover {
   color: #00ffff;
+  font-family: terminal;
+  font-size: 95px;
+}
+
+.pageHeaderText {
+  display: inline-block;
+  font-family: EditorialNew;
+  font-size: 80px;
+  line-height: 86px;
+  max-width: 800px;
+  letter-spacing: -1px;
+}
+
+#sequence {
+  padding-top: 100px;
+  display: inline;
+  font-family: EditorialNew;
+  font-size: 80px;
+  line-height: 86px;
+  letter-spacing: -1px;
 }
 
 .pageBodyText {
-  font-family: texgyreheros;
+  display:inline-block;
+  font-family: NeueMontreal;
   font-size: 32px;
   text-align: left;
   line-height: 36px;
+  width: 90%;
   max-width: 800px;
   text-align: justify;
+  padding-top: 100px;
   padding-bottom: 100px;
   letter-spacing: -1px;
 }
 
-.startButtonStructure {
-  position: fixed;
-  right: 10%;
-  top: 28%;
-  animation: rotation 20s infinite linear;
-}
-
-.startButtonText {
-  padding-top: 5px;
-  padding-bottom: 5px;
-  padding: 32px;
-  font-family: terminal;
-  font-size: 40px;
-  color: black;
-  border: 2px solid black;
-  border-radius: 200px / 200px;
+#menuContainer {
+  position: absolute;
+  left: 120px;
+  top: 40%;
+  width: 200px;
+  height: 284px;
   background-color: white;
-  letter-spacing: 2px;
+  cursor: move;
+  font-family: NeueMontreal;
+  background-color: white;
+  border: 1px solid black;
 }
 
-.startButtonText:hover {
+#backButtonContainer {
+  position: absolute;
+  left: 120px;
+  top: 40%;
+  width: 200px;
+  height: 138px;
+  background-color: white;
+  cursor: move;
+  font-family: NeueMontreal;
+  background-color: white;
+  border: 1px solid black;
+  z-index: 21;
+}
+
+#menuContainerHeader {
+  font-family: NeueMontreal;
+  font-size: 20px;
+  z-index: 21px;
+}
+
+.menuLink{
+  height: 32px;
+  font-family: NeueMontreal;
+  font-size: 25px;
+  display: block;
+  padding: 20px;
+  padding-left: 20px;
+  border-top: 1px solid black;
+  color: black;
+  background-color: yellow;
+  text-decoration: none;
+  text-align: left;
+}
+
+.menuLink:hover {
+  font-family: NeueMontreal;
+  font-size: 25px;
+  display: block;
+  padding: 20px;
+  padding-left: 20px;
+  border-top: 1px solid black;
+  background-color: black;
+  color: white;
+
+}
+
+.startButtonStructure {
+  width: 200px;
+  height: 200px;
+  border-radius: 1000px;
+  position: absolute;
+  left: 80%;
+  top: 24%;
+  animation: rotation 20s infinite linear;
+  background-color: blue;
+}
+
+#startText {
+  width: 200px;
+  height: 200px;
+  border: 4px solid blue;
+  border-radius: 1000px;
+  position: fixed;
+  left: 70%;
+  top: 28%;
+  font-family: NeueMontreal;
+  font-size: 40px;
+  font-weight: bold;
+  animation: rotation 20s infinite linear;
+  color: blue;
+  transition: background-color .3s, color .3s;
+  letter-spacing: 0px;
+}
+
+#startText:hover {
+  opacity: 1;
   color: white;
   background-color: blue;
-
+  border: 4px solid blue;
 }
+
 
 #mydiv {
   position: absolute;
@@ -151,6 +280,10 @@
   cursor: move;
 }
 
+.galleryImageContainer:hover {
+  z-index: 20;
+}
+
 #galleryImageContainerAlyssa {
   z-index: 10;
   left: 20%;
@@ -158,15 +291,13 @@
 }
 
 #galleryImageContainerChanel {
-  z-index: 9;
   left: 70%;
   top: 25%;
 }
 
 #galleryImageContainerDani {
-  z-index: 6;
-  left: 60%;
-  top: 30%;
+  left: 25%;
+  top: 35%;
 }
 
 #galleryImageContainerGill {
@@ -175,14 +306,14 @@
 }
 
 #galleryImageContainerKate {
-  z-index: 8;
   left: 75%;
   top: 45%;
 }
 
 #galleryImageContainerKatie {
-  left: 25%;
-  top: 35%;
+  z-index: 6;
+  left: 60%;
+  top: 30%;
 }
 
 #galleryImageContainerKristie {

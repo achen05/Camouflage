@@ -7,22 +7,92 @@
   </head>
   <body>
     <center>
+      <div id="backButtonContainer">
+        <p id="menuContainerHeader">LINKS</p>
+        <a  class="menuLink" href="home.html">Go Back</a>
+      </div>
       <div class="pageTextStructure">
-        <p class="pageMainText">Aldon Chen <br> for MICA <br> Forum Fall 2020</p>
-        <p class="pageMainText">Context is hidden <br>in plain sight.</p>
+        <p class="mainText2">Al</p>
+          <p class="mainText1">don </p>
+          <p class="mainText3"> Ch</p>
+          <p class="mainText4">en</p> <br>
+          <p class="mainText2"> f</p>
+            <p class="mainText1">or </p><br>
+          <p class="mainText2">MICA </p>
+          <p class="mainText4">F</p>
+          <p class="mainText3">or</p>
+          <p class="mainText4">um </p><br>
+          <p class="mainText1">Fa</p>
+          <p class="mainText2">ll </p>
+          <p class="mainText1">20</p>
+          <p class="mainText2">20</p></br>
+          <p id="sequence"></p>
+        <p class="pageHeaderText"> <p id="sequence"><br> hidden in plain sight.</p>
         <p class="pageBodyText">
           <span class="tabSpace">This website is the interface for an interactive art experience which examines value and perception.
-          I conceived, designed, and developed this project in 2020 as a response to Stephen Hendee's project prompt "Camouflage" for MICA Forum 1.
+          I conceived, designed, and developed this project in late 2020 as a response to Stephen Hendee's project prompt "Camouflage" for MICA Forum 1.
           <br>
           <span class="tabSpace">
-            I designed this interactive art experience to help users define and materialize their relationships with
-              objects, entities, places, and times they find personally significant.
+            I created this interactive art experience to help users define and materialize their relationships with
+            objects, entities, places, and times they find personally significant.
             As you explore this website, I implore you to reflect on
             the ways context informs, and perhaps even singlehandedly creates, our individual experiences
-            of beauty and our perceptions of art objects.
-
-        </p>
+            of beauty and our perceptions of art objects and beyond.
+          </p>
       </div>
-      </center>
+    </center>
+    <script type="text/javascript">
+    dragElement(document.getElementById("backButtonContainer"));
+    function dragElement(elmnt) {
+      var pos1 = 0, pos2 = 0, pos3 = 0, pos4 = 0;
+        elmnt.onmousedown = dragMouseDown;
+
+      function dragMouseDown(e) {
+        e = e || window.event;
+        e.preventDefault();
+        // get the mouse cursor position at startup:
+        pos3 = e.clientX;
+        pos4 = e.clientY;
+        document.onmouseup = closeDragElement;
+        // call a function whenever the cursor moves:
+        document.onmousemove = elementDrag;
+      }
+
+      function elementDrag(e) {
+        e = e || window.event;
+        e.preventDefault();
+        // calculate the new cursor position:
+        pos1 = pos3 - e.clientX;
+        pos2 = pos4 - e.clientY;
+        pos3 = e.clientX;
+        pos4 = e.clientY;
+        // set the element's new position:
+        elmnt.style.top = (elmnt.offsetTop - pos2) + "px";
+        elmnt.style.left = (elmnt.offsetLeft - pos1) + "px";
+      }
+
+      function closeDragElement() {
+        // stop moving when mouse button is released:
+        document.onmouseup = null;
+        document.onmousemove = null;
+      }
+    }
+    var example = ['Beauty', 'Art', 'Context', 'Meaning'];
+
+        textSequence(0);
+        function textSequence(i) {
+
+            if (example.length > i) {
+                setTimeout(function() {
+                    document.getElementById("sequence").innerHTML = example[i];
+                    textSequence(++i);
+                }, 300); // 1 second (in milliseconds)
+
+            } else if (example.length == i) { // Loop
+                textSequence(0);
+            }
+
+        }
+    </script>
   </body>
 </html>
